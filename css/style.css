@@ -2,7 +2,7 @@
 body {
   font-family: "Nunito", sans-serif;
   color: black;
-  padding: 2rem;
+  padding: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -44,14 +44,19 @@ body::before {
   -webkit-backdrop-filter: blur(15px);
           backdrop-filter: blur(15px);
   border: 2px solid rgba(255, 255, 255, 0.2509803922);
-  padding: 3rem 4rem;
+  padding: 2rem 2rem;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 30px;
 }
 @media screen and (max-width: 768px) {
   .profile-card {
-    width: auto;
+    width: 99%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .profile-card {
+    width: 99%;
   }
 }
 .profile-card_img img {
@@ -63,6 +68,12 @@ body::before {
      object-fit: cover;
   display: block;
   box-shadow: 0 10px 60px -10px rgb(13, 28, 39);
+}
+@media screen and (max-width: 576px) {
+  .profile-card_img img {
+    width: 150px;
+    height: 150px;
+  }
 }
 .profile-card_desc {
   text-align: center;
@@ -77,6 +88,11 @@ body::before {
 .profile-card_desc h1 + div {
   font-size: 1.1rem;
 }
+@media screen and (max-width: 576px) {
+  .profile-card_desc h1 {
+    font-size: 2rem;
+  }
+}
 .profile-card_desc .location {
   display: flex;
   align-items: center;
@@ -87,11 +103,13 @@ body::before {
 .profile-card_info {
   display: flex;
   justify-content: center;
+  align-items: center;
+  position: relative;
   gap: 50px;
 }
 @media screen and (max-width: 576px) {
   .profile-card_info {
-    gap: 30px;
+    gap: 10px;
   }
 }
 .profile-card_info > div {
@@ -109,6 +127,18 @@ body::before {
 .profile-card_info > div > *:last-child {
   font-size: 16px;
   opacity: 0.7;
+}
+@media screen and (max-width: 576px) {
+  .profile-card_info > div > *:first-child {
+    font-size: 1.5rem;
+    opacity: 0.7;
+    padding: auto;
+    margin: auto;
+  }
+  .profile-card_info > div > *:last-child {
+    font-size: 1rem;
+    opacity: 0.7;
+  }
 }
 .profile-card_social {
   display: flex;
@@ -190,6 +220,11 @@ body::before {
   }
 }
 @media screen and (max-width: 2000px) {
+  .profile-card_action > button:hover {
+    transform: translateY(-5px);
+  }
+}
+@media screen and (max-width: 300px) {
   .profile-card_action > button:hover {
     transform: translateY(-5px);
   }
